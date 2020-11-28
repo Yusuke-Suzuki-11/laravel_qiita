@@ -12,6 +12,12 @@ use function Psy\debug;
 
 class PostController extends Controller
 {
+	public function top()
+	{
+		$articles = Post::orderBy('created_at', 'asc')->get();
+		return view('top', compact('articles'));
+	}
+
 	public function new()
 	{
 		return view('auth.drafts.new');
