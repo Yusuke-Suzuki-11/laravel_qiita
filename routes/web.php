@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/drafts/new', 'Auth\PostController@new')->name('drafts.new'); // 追記
