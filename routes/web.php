@@ -19,4 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/drafts/new', 'Auth\PostController@new')->name('drafts.new'); // 追記
+Route::get('/drafts/new', 'Auth\PostController@new')->name('drafts.new');
+Route::post('/drafts/store', 'Auth\PostController@store')->name('drafts.store');
+
+Route::get('/drafts/{id}', 'Auth\PostController@show')->name('drafts.show');
